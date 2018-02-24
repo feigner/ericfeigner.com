@@ -1,0 +1,4 @@
+# <3 EFF
+
+User-agent: *
+Disallow: 
