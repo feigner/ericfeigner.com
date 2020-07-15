@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!--
+
+<head>
+  <!--
        __
       <- )
       /( \
@@ -9,29 +10,30 @@
       " "
      <3 E F F
     -->
-    <meta charset="utf-8">
-    <title>ERIC_FEIGNER_2018.NFO</title>
+  <meta charset="utf-8" />
+  <title>ERIC_FEIGNER_202X.NFO</title>
 
-    <meta name="title" content="ERIC_FEIGNER_2018.NFO" />
-    <meta name="description" content="My name is Eric Feigner and this is my internet website." />
-    <meta name="keywords" content="eric, feigner, eff, ericfeigner" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="language" content="en" />
-    <meta name="robots" content="index, follow" />
+  <meta name="title" content="ERIC_FEIGNER_202X.NFO" />
+  <meta name="description" content="My name is Eric Feigner and this is my internet website." />
+  <meta name="keywords" content="eric, feigner, eff, ericfeigner" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="language" content="en" />
+  <meta name="robots" content="index, follow" />
 
-    <meta property="og:title" content="ERIC FEIGNER" />
-    <meta property="og:type" content="personal" />
-    <meta property="og:url" content="http://ericfeigner.com" />
-    <meta property="og:image" content="http://ericfeigner.com/assets/images/og.png" />
-    <meta property="og:site_name" content="ERIC FEIGNER" />
+  <meta property="og:title" content="ERIC FEIGNER" />
+  <meta property="og:type" content="personal" />
+  <meta property="og:url" content="http://ericfeigner.com" />
+  <meta property="og:image" content="http://ericfeigner.com/assets/images/og.png" />
+  <meta property="og:site_name" content="ERIC FEIGNER" />
 
-    <link rel="shortcut icon" href="/assets/images/favicon.png" />
+  <link rel="shortcut icon" href="./assets/images/favicon.png" />
 
-    <link href="/assets/css/bootstrap.css" rel="stylesheet">
-    <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="./assets/css/bootstrap.css" rel="stylesheet" />
+  <link href="./assets/css/bootstrap-theme.css" rel="stylesheet" />
 
-    <style type="text/css">
-      /* ANSI (normal / bright)
+  <style type="text/css">
+    /*
+         ANSI (normal / bright)
          black: #000000 / #555555
          red: #aa0000 / #ff5555
          green: #00aa00 / #55ff55
@@ -39,371 +41,863 @@
          blue:	#0000aa / #5555ff
          magenta: #aa00aa / # ff55ff
          cyan: #00aaaa / #55ffff
-         white: #aaaaaa / #ffffff */
-      body { visibility: hidden }
-      canvas { width: 100%; }
-      footer { background-color: #000 }
-      .tldr { color: #ffffff; border: 1px solid;}
+         white: #aaaaaa / #ffffff
+      */
+    html { -webkit-text-size-adjust: 100%; overflow-x: hidden;}
+    body { visibility: hidden; }
+    header { display: flex;}
+    header>div { flex: 1; }
+    canvas { width: 100%; }
+    footer { background-color: #000; }
+    a { color: #fff; text-decoration: underline; }
+    nav a, a.btn { text-decoration: none; }
+    #ascii {
+      margin: 1.5ch 1ch;
+      text-align: center;
+      color: #fff;
+      white-space: pre;
+      font-size: 18px !important;
+      line-height: 15px;
+    }
+    #nfo .lbl { color: #bbb;}
+    #nfo>.page-header { margin-top: 0; }
+    #work .lbl { color: #55ff55; }
+    #work hr { margin-bottom: 20px; }
+    #work .tldr { color: #fff; }
+    #faq .question { 
+      padding: 9px 14px;
+      color: #ffffff;
+      border: 1px solid #ffffff; 
+    }
+  </style>
+</head>
 
-      #work .table tr>td:first-child { color: #55ff55; }
-      @media (min-width: 767px) { #work .table tr>td:first-child { padding-right: 64px; }}
-    </style>
-  </head>
+<body>
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="brand" href="./">ERIC_FEIGNER_202X.NFO</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right hidden-xxs">
+        <li class="hidden-xs"><a href="./#nfo">NFO</a></li>
+        <li class="hidden-xs"><a href="./#personal">PERSONAL</a></li>
+        <li class="hidden-xs"><a href="./#work">WORK</a></li>
+        <li class="hidden-xs"><a href="./#faq">FAQ</a></li>
+        <li id="theme" class="nav-item dropdown hidden-xxs">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">&#10084;&nbsp;<span class="caret"></span></a>
+          <div class="dropdown-menu " aria-labelledby="themes"></div>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-  <body>
-    <div class="navbar navbar-inverse navbar-static-top hidden-phone">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="brand" href="./">ERIC_FEIGNER_2018.NFO</a>
-            <ul class="nav navbar-nav nav-collapse">
-              <li><a href="./#nfo">NFO</a></li>
-              <li><a href="./#personal">PERSONAL</a></li>
-              <li><a href="./#work">WORK</a></li>
-              <li><a href="./#faq">FAQ</a></li>
-            </ul>
+  <header>
+    <div id="ansi" class="hidden-xs hidden-sm hidden-md hidden-lg hidden-xl"></div>
+    <div id="ascii" class="hidden-xxs"></div>
+  </header>
+
+  <div class="container-fluid">
+    <section id="nfo">
+      <div class="page-header">
+        <h1>1. NFO</h1>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-6">
+          <div class="jumbotron">
+            <h1>Salutations!</h1>
+            <div class="row">
+              <div class="col-xs-4 col-sm-4 lbl">Name:</div>
+              <p class="col-xs-8 col-sm-8">
+                Eric Feigner
+              </p>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-4 col-sm-4 lbl">Alias:</div>
+              <p class="col-xs-8 col-sm-8">
+                EFF
+              </p>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-4 col-sm-4 lbl">Primary:</div>
+              <p class="col-xs-8 col-sm-8">
+                Software development, technical direction
+              </p>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-4 col-sm-4 lbl">Secondary:</div>
+              <p class="col-xs-8 col-sm-8">
+                Design, writing
+              </p>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-4 col-sm-4 lbl">Tertiary:</div>
+              <p class="col-xs-8 col-sm-8">
+                Dirtbikes, guitar, skiing, running
+              </p>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-4 col-sm-4 lbl">Special move:</div>
+              <p class="col-xs-8 col-sm-8">
+                Infinte toothpicks
+              </p>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px">
+              <a class="btn btn-primary" href="#personal">Learn more</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-5 col-md-3 col-lg-3">
+          <div id="get-at-me" class="jumbotron" style="text-align: center; ">
+            <h1>
+              Get at me!
+            </h1>
+            <br />
+            <a id="email" class="btn btn-primary">Email</a><br />
+            <a class="btn btn-primary" href="https://github.com/feigner" target="_blank">Github</a>
+          </div>
+
+          <div class="jumbotron hidden-xxs hidden-xs hidden-md hidden-lg hidden-xl" style="text-align: center; margin-top: 40px;">
+            <pre class="">
+  __
+___( o)>
+\ <_. )
+ `---'
+             </pre>
+            <pre>&#10084;</pre>
+          </div>
+        </div>
+
+
+        <div class="col-xs-6 col-md-2 col-lg-3 hidden-sm">
+          <div class="jumbotron" style="text-align: center; ">
+            <h1>&#10084;</h1>
+            <pre class="">
+ /""\      ,
+<>^  L____/|
+ `) /`   , /
+  \ `---' /
+   `'";\)`
+     _/_Y
+           </pre>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="personal">
+      <div class="page-header">
+        <h1>2. PERSONAL</h1>
+      </div>
+      <p>
+        I spend most of my life combining software, logic and design to solve
+        problems. Creativity with a scientific approach, in relentless search
+        of <em>simplicity, efficiency, elegance</em>.
+      </p>
+      <p>
+        My goals? To find a big box of money and buy a hovercraft. 
+        Failing that, I want nothing more than to solve tough problems with great teams, 
+        crafting beautiful, functional things that (hopefully) make people smile.
+      </p>
+    </section>
+
+    <section id="work">
+      <div class="page-header">
+        <h1>3. WORK</h1>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Name:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          Consultation / Freelance
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Position:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          Sole Proprietor
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Duration:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          2006-PRESENT
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Detail:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          Let's build some cool stuff, solve some tough problems and have a great time doing so.
+        </p>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Name:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          <a href="https://chipdrop.com">ChipDrop</a> / <a href="https://freeya.com">Freeya</a>
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Position:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          CTO
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Duration:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          2021-Present
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Tech:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          Python, Go, JavaScript, TypeScript, Vue, Docker, Redis, AWS, GCP, Stripe, Shopify, iOS, Android
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Detail:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          Working for a tiny yet far-reaching startup, doing big things with limited resources. Having a blast working with friends.
+          Core duties include everything tech -- architecture, development, scoping, scheduling, coordination, planning, support, testing, etc.
+          Additional duties include anything else that needs to be done. Extensive hat collection.
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">tl;dr:</div>
+        <p class="col-xs-12 col-sm-10 tldr">
+          Combine technology + data to connect people IRL in an attempt to reduce waste, keeping hundreds of tons of stuff out of landfills every year.
+        </p>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Name:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          <a href="https://www.marcopolo.me">Marco Polo</a>
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Position:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          Senior Developer / Tech lead
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Duration:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          2018-2021
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Tech:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          Python, Go, JavaScript, TypeScript, Vue, Docker, Redis, AWS, Firebase, Stripe, FFmpeg, Snowflake
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Detail:</div>
+        <div class="col-xs-12 col-sm-10 ">
+          <p>
+            Working for a remote startup with a huge install base and an international team, my duties were
+            both varied and ever-changing, including product design, feature development, analytics, architecture, prototyping, 
+            production support, coaching, management, automation, devops, etc.
+          </p>
+          <p>
+            The bulk of my time was spent honing the primary API and myriad supporting microservices. Constant context switching.           
+            Converted said API from crufty Python 2 -> gleaming Python 3 with zero downtime and zero bugs, all while under extremely active development / load.
+            Prototyped and launched a subscription-based product that immediately started printing money.
+            Survived the zerg rush of new users when the pandemic hit and everyone was frantically searching for viable video collaboration tooling.
+          </p>
         </div>
       </div>
-    </div>
 
-    <header></header>
-
-    <div class="container-fluid">
-
-      <div class="row-fluid">
-        <section id="nfo">
-          <div class="page-header">
-            <h1>1. NFO</h1>
-          </div>
-
-          <div class="hero-unit span7">
-            <h1>Salutations!</h1>
-            <table class="table">
-              <tbody>
-                <tr>
-                  <td>Name:</td>
-                  <td>Eric Feigner</td>
-                </tr>
-                <tr>
-                  <td>Alias:</td>
-                  <td>EFF</td>
-                </tr>
-                <tr>
-                  <td>Primary:</td>
-                  <td>Software development / Technical direction</td>
-                </tr>
-                <tr>
-                  <td>Secondary:</td>
-                  <td>Design, writing</td>
-                </tr>
-                <tr>
-                  <td>Tertiary:</td>
-                  <td>Dirtbikes, music, skiing, running</td>
-                <tr>
-                  <td>Special move:</td>
-                  <td>Infinite toothpicks</td>
-                </tr>
-              </tbody>
-            </table>
-            <div style="text-align: center;">
-              <a class="btn btn-primary btn-large" href="#personal">Learn more</a>
-            </div>
-          </div>
-
-          <div class="span4 offset1-2">
-            <div class="hero-unit" style="text-align: center;">
-              <h1>Get at me:</h1>
-              <a id="email" class="btn btn-large">Email</a>
-            </div>
-            <div class="hidden-phone">
-              <br/><br />
-              <div class="hero-unit" style="text-align: center;">
-                <p>&#10084;&#10084;&#10084;</p>
-                <p>BEST VIEWED AT 80 COLUMNS WIDE<br/>
-                <p>&#10084;&#10084;&#10084;</p>
-              </div>
-            </div>
-          </div>
-
-        </section>
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">tl;dr:</div>
+        <p class="col-xs-12 col-sm-10 tldr">
+          Joyfully jumping in and out of countless codebases, leading multidisciplinary dev teams across numerous successful projects and initiatives.
+          Hard work with excellent people on a great product.
+        </p>
       </div>
 
-      <div class="row-fluid">
-        <section id="personal">
-          <div class="page-header">
-            <h1>2. PERSONAL</h1>
-          </div>
-          <p>I spend most of my life combining software, logic and design to solve problems. Creativity with a scientific approach, in relentless search of <em>simplicity, efficiency, elegance</em>.</p>
-          <p>My goals? To find a big box of money and buy a hovercraft. Failing that, I like to spend my time combining technology and design, crafting beautiful, functional things that make people smile.</p>
-        </section>
+      <hr />
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Name:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          <a href="https://www.stumptowncoffee.com">Stumptown Coffee</a>
+        </p>
       </div>
 
-      <div class="row-fluid">
-        <section id="work">
-          <div class="page-header">
-            <h1>3. WORK</h1>
-          </div>
-
-          <table class="table">
-            <tbody>
-              <tr>
-                <td>Name:</td>
-                <td>Consultation / Freelance</td>
-              </tr>
-              <tr>
-                <td>Position:</td>
-                <td>Sole Proprietor</td>
-              </tr>
-              <tr>
-                <td>Duration:</td>
-                <td>2008-PRESENT</td>
-              </tr>
-              <tr>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Detail:</td>
-                <td>
-                  Let's build some cool stuff, solve some tough problems and have a great time doing so.
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </td>
-              </tr>
-              </tr>
-            </tbody>
-          </table>
-
-          <hr>
-
-          <table class="table">
-            <tbody>
-              <tr>
-                <td>Name:</td>
-                <td><a href="https://www.stumptowncoffee.com">Stumptown Coffee</a></td>
-              </tr>
-              <tr>
-                <td>Position:</td>
-                <td>Technical Director / Director of Ecommerce</td>
-              </tr>
-              <tr>
-                <td>Duration:</td>
-                <td>2015-2018</td>
-              </tr>
-              <tr>
-                <td>Tech:</td>
-                <td>Python, Ruby, JavaScript, AWS, NetSuite, Contentful, Chargify, Square</td>
-              </tr>
-              <tr>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Detail:</td>
-                <td>
-                  Used technology, data and process to automate away much of the manual labor / complexity of a multimillion dollar online business. Provided top-tier UX for customers while simultaneously building heavy-duty, fault-tolerant integrations with third-party systems and a gnarly ERP.
-                  <br /><br />
-                  Helped bootstrap and manage a non-trivial coffee subscription service. Managed production / staging / development systems. Grew revenue 30% in one year. 100% system uptime for my entire duration.
-                </td>
-              </tr>
-              <tr>
-                <td></td>
-              </tr>
-              <tr>
-                <td>tl;dr:</td>
-                <td class="tldr">Built and operated a finely-tuned coffee-selling machine. Automated everything. Big things with miniscule budget.</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <hr>
-
-          <table class="table">
-            <tbody>
-              <tr>
-                <td>Name:</td>
-                <td><a href="https://www.instrument.com">Instrument</a></td>
-              </tr>
-              <tr>
-                <td>Position:</td>
-                <td>Technical Director</td>
-              </tr>
-              <tr>
-                <td>Duration:</td>
-                <td>2011-2015</td>
-              </tr>
-              <tr>
-                <td>Tech:</td>
-                <td>Python, Java, JavaScript, Ruby, Clojure, Linux, AWS</td>
-              </tr>
-              <tr>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Detail:</td>
-                <td>
-                  Working for a fantastic agency, my duties consisted of writing mountains of code and leading a team of developers across multiple in-flight projects. From idea to execution, I lent a hand in crafting a sizable amount of high-quality work using fun technologies, with great people.
-                  <br /><br />
-                  Implemented a culture of best practices including unit / integration / performance testing, continuous deployment and multi-contributor git workflows, all while building big, beautiful, robust, high-availability interactive experiences.
-                </td>
-              </tr>
-              <tr>
-                <td></td>
-              </tr>
-              <tr>
-                <td>tl;dr:</td>
-                <td class="tldr">Built complicated yet <em>maintainable</em> software. Flexed soft skills and right brain. Teamwork is everything.</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <hr>
-
-          <table class="table">
-            <tbody>
-              <tr>
-                <td>Name:</td>
-                <td><a href="https://www.nike.com">Nike</a></td>
-              </tr>
-              <tr>
-                <td>Position:</td>
-                <td>Senior Application Engineer</td>
-              </tr>
-              <tr>
-                <td>Duration:</td>
-                <td>2007-2011</td>
-              </tr>
-              <tr>
-                <td>Tech:</td>
-                <td>Java, Spring, Jetty, Tomcat, Apache, JMeter, ATG, Endeca, Solaris, JavaScript, HTML, CSS</td>
-              </tr>
-              <tr>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Detail:</td>
-                <td>
-                  Working for the nike.com e-commerce group, my duties included extensive frontend / backend development using a variety of technologies with multiple, remote agencies / offshore teams.
-                  <br><br>
-                  Lead developer on a scalable internal framework to serve NikeStore and many other consumer-facing websites. Shaved 150ms off HTTP response times. Lead developer on NikeStore mobile. Primary developer for NikeStore search engine / product API.
-                  <br><br>Additional duties included project setup, planning, documentation, support, resource management, budgeting, product demos, quality assessment, performance testing, profiling and monitoring / alerting.
-                </td>
-              </tr>
-              <tr>
-                <td></td>
-              </tr>
-              <tr>
-                <td>tl;dr:</td>
-                <td class="tldr">Built some neat stuff, solved a bunch of hard problems at scale, all while handling crushing volumes of global commerce.</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <hr>
-
-          <table class="table">
-            <tbody>
-              <tr>
-                <td>Name:</td>
-                <td><a href="https://www.nike.com">Nike</a></td>
-              </tr>
-              <tr>
-                <td>Position:</td>
-                <td>Support Engineer</td>
-              </tr>
-              <tr>
-                <td>Duration:</td>
-                <td>2006-2007</td>
-              </tr>
-              <tr>
-                <td>Tech:</td>
-                <td>Java, JSP, Oracle, PHP, VBasic (no joke!)</td>
-              </tr>
-              <tr>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Detail:</td>
-                <td>
-                  Acted as first-line support engineer for nike.com. Duties included development, debugging, scripting, database management, configuring and troubleshooting production systems, issue assessment / research, code reviews, version control management, <em>pager duty</em>.
-                </td>
-              </tr>
-              <tr>
-                <td></td>
-              </tr>
-              <tr>
-                <td>tl;dr:</td>
-                <td class="tldr">Fixed a million horribly broken things, day in, day out. Learned on my feet. Honed troubleshooting skills to a sharp point.</td>
-              </tr>
-            </tbody>
-          </table>
-          <hr>
-
-          <table class="table xtable-bordered">
-            <tbody>
-              <tr>
-                <td>Name:</td>
-                <td>The Daily Barometer</td>
-              </tr>
-              <tr>
-                <td>Position:</td>
-                <td>Section editor, copywriter</td>
-              </tr>
-              <tr>
-                <td>Duration:</td>
-                <td>2003-2006</td>
-              </tr>
-              <tr>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Detail:</td>
-                <td>
-                  Worked under extremely tight deadlines (daily) reviewing, reporting, critiqing and designing for a National award-winning college newspaper. Duties included managing a team of six writers, designing page layouts, cover art, interviewing and writing copy.
-                </td>
-              </tr>
-              <tr>
-                <td>tl;dr:</td>
-                <td class="tldr">Gained deep appreciation for a dying trade and effective, concise copywriting. Stress city.</td>
-              </tr>
-            </tbody>
-          </table>
-
-        </section>
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Position:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          Technical Director / Director of Ecommerce
+        </p>
       </div>
 
-      <div class="row-fluid">
-        <section id="faq">
-          <div class="page-header">
-            <h1>4. FAQ</h1>
-          </div>
-          <p class="lead">What's with the design?</p>
-          <p>Largely (totally) inspired by ANSI art.</p>
-          <p class="lead">What is ANSI art?</p>
-          <p>It's an old, short-lived computer art form widely used on BBSes back in the day. 80 columns wide, 16 colors and 256 characters.  It's a chunky and limited format, but sometimes constraint breeds creativity.</p>
-          <p class="lead">... why?</p>
-          <p>I first encountered ANSI art on my local BBS back in the early 90s and it melted my young, inpressionable brain.</p>
-          <p>Thanks to <a href="https://github.com/atdt/escapes.js">escapes.js</a> and <a href="https://github.com/kristopolous/BOOTSTRA.386">BOOTSTRA.386</a>, we can now render ANSI art in the browser and sort of make it look like an old DOS term, so that's exactly what I did &#10084;</p>
-        </section>
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Duration:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          2015-2018
+        </p>
       </div>
 
-    </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Tech:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          Python, Ruby, JavaScript, Saltstack, Docker, AWS, NetSuite,
+          Contentful, Chargify, Square, Stripe
+        </p>
+      </div>
 
-    <footer></footer>
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Detail:</div>
+        <div class="col-xs-12 col-sm-10 ">
+          <p>
+            Used technology, data and process to automate away much of the
+            manual labor / complexity of a multimillion dollar online
+            business. Provided top-tier UX for customers while simultaneously
+            building heavy-duty, fault-tolerant integrations with third-party
+            systems and a gnarly ERP.
+          </p>
+          <p>
+            Helped bootstrap and manage a non-trivial coffee subscription
+            service. Managed production / staging / development systems. Grew
+            revenue 30% in one year. 100% system uptime for my entire
+            duration.
+          </p>
+        </div>
+      </div>
 
-    <script src="/assets/js/jquery-3.3.1.min.js"></script>
-    <script src="/assets/js/bootstrap.js"></script>
-    <script src="/assets/js/escapes.js"></script>
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">tl;dr:</div>
+        <p class="col-xs-12 col-sm-10 tldr">
+          Built and operated a finely-tuned coffee-selling machine. Automated
+          everything. Big things with miniscule budget.
+        </p>
+      </div>
 
-    <script type="text/javascript">
-      _386 = { onePass: true, speedFactor: 2.2 };
+      <hr />
 
-      escapes('/assets/ansi/ERIC_FEIGNER_HEADER_2018.ANS', function () { $('header').html(this); });
-      escapes('/assets/ansi/ERIC_FEIGNER_FOOTER_2018.ANS', function () { $('footer').html(this); });
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Name:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          <a href="https://www.instrument.com">Instrument</a>
+        </p>
+      </div>
 
-      $('#email').mousedown(function(){
-        var _0x1123 = ["\x66\x65\x69\x67\x6E\x65\x72\x40\x67\x6D\x61\x69\x6C\x2E\x63\x6F\x6D"];
-        $(this).replaceWith("<h4>" + _0x1123[0] + "</h4>");
-      })
-    </script>
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Position:</div>
+        <p class="col-xs-12 col-sm-10 ">Technical Director</p>
+      </div>
 
-  </body>
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Duration:</div>
+        <p class="col-xs-12 col-sm-10 ">2011-2015</p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Tech:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          Python, Java, JavaScript, Ruby, Clojure, AWS
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Detail:</div>
+        <div class="col-xs-12 col-sm-10 ">
+          <p>
+            Working for a fantastic agency, my duties consisted of writing
+            mountains of code and leading a team of developers across multiple
+            in-flight projects. From idea to execution, I lent a hand in
+            crafting a sizable amount of high-quality work using fun
+            technologies, with great people.
+          </p>
+          <p>
+            Implemented a culture of best practices including unit / integration
+            / performance testing, continuous deployment and multi-contributor
+            git workflows, all while building big, beautiful, robust,
+            high-availability interactive experiences.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">tl;dr:</div>
+        <p class="col-xs-12 col-sm-10 tldr">
+          Built complicated yet <em>maintainable</em> software. Flexed soft
+          skills and right brain. Teamwork is everything.
+        </p>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Name:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          <a href="https://www.nike.com">Nike</a>
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Position:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          Senior Application Engineer
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Duration:</div>
+        <p class="col-xs-12 col-sm-10 ">2007-2011</p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Tech:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          Java, Spring, Jetty, Tomcat, Apache, JMeter, ATG, Endeca, Solaris,
+          JavaScript, HTML, CSS
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Detail:</div>
+        <div class="col-xs-12 col-sm-10 ">
+          <p>
+            Working for the nike.com e-commerce group, my duties included
+            extensive frontend / backend development using a variety of
+            technologies with multiple, remote agencies / offshore teams.
+          </p>
+          <p>
+            Lead developer on a scalable internal framework to serve NikeStore
+            and many other consumer-facing websites. Shaved 150ms off HTTP
+            response times. Lead developer on NikeStore mobile. Primary
+            developer for NikeStore search engine / product API.
+          </p>
+          <p>Additional duties included project setup, planning,
+            documentation, support, resource management, budgeting, product
+            demos, quality assessment, performance testing, profiling and
+            monitoring / alerting.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">tl;dr:</div>
+        <p class="col-xs-12 col-sm-10 tldr">
+          Built some neat stuff, solved a bunch of hard problems at scale, all
+          while handling crushing volumes of global commerce.
+        </p>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Name:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          <a href="https://www.nike.com">Nike</a>
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Position:</div>
+        <p class="col-xs-12 col-sm-10 ">Support Engineer</p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Duration:</div>
+        <p class="col-xs-12 col-sm-10 ">2006-2007</p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Tech:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          Java, JSP, Oracle, PHP, VBasic (no joke!)
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Detail:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          Acted as first-line support engineer for nike.com. Duties included
+          development, debugging, scripting, database management, configuring
+          and troubleshooting production systems, issue assessment / research,
+          code reviews, version control management,
+          <em>pager duty</em>.
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">tl;dr:</div>
+        <p class="col-xs-12 col-sm-10 tldr">
+          Fixed a million horribly broken things, day in, day out. Learned on
+          my feet. Honed troubleshooting skills to a sharp point.
+        </p>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Name:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          The Daily Barometer
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Position:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          Section Editor, Copywriter
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Duration:</div>
+        <p class="col-xs-12 col-sm-10 ">2003-2006</p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Tech:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          Java, JSP, Oracle, PHP, VBasic (no joke!)
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">Detail:</div>
+        <p class="col-xs-12 col-sm-10 ">
+          Worked under extremely tight deadlines (daily) reviewing, reporting,
+          critiquing and designing for a National award-winning college
+          newspaper. Duties included managing a team of six writers, designing
+          page layouts, cover art, interviewing and writing copy.
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 lbl">tl;dr:</div>
+        <p class="col-xs-12 col-sm-10 tldr" style="margin-bottom: 0;">
+          Gained deep appreciation for a dying trade and effective, concise
+          copywriting. Stress city.
+        </p>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="page-header">
+        <h1>4. FAQ</h1>
+      </div>
+      <p class="question">What's with the design?</p>
+      <p>
+        An anachronistic combination of ANSI art and ASCII shaders, inspired from DOS /
+        <a href="https://en.wikipedia.org/wiki/Bulletin_board_system" target="_blank">bulletin board system</a>
+        (BBS) interfaces from my salad days of computing.
+      </p>
+      <p class="question">What is ANSI art?</p>
+      <p>
+        It's an old, short-lived computer art form widely used on BBSes back
+        in the day. 80 columns wide, 16 colors and 256 characters. It's a
+        chunky and limited format, but sometimes constraint breeds creativity.
+      </p>
+      <p>
+        See <a href="https://16colo.rs/" target="_blank">16colo.rs</a> for more info.
+      </p>
+      <p class="question">... why?</p>
+      <p>
+        I first encountered ASCII / ANSI art on my local BBS back in the early 90s and it melted my young, impressionable brain.
+      </p>
+      <p>
+        Thanks to
+        <a href="https://www.acid.org/apps/apps.html" target="_blank">ACiDDraw</a>,
+        <a href="https://github.com/atdt/escapes.js" target="_blank">escapes.js</a> and
+        <a href="https://github.com/kristopolous/BOOTSTRA.386" target="_blank">BOOTSTRA.386</a>, I can boot a 386 VM, draw ANSI art
+        using an app from '94 and render in the browser, sort of making it look like the old DOS term I'd stare at for hours, so that's exactly what I did &#10084;
+      </p>
+    </section>
+  </div>
+
+  <footer></footer>
+
+  <script type="text/javascript">
+    // evergreen date :O
+    for (const elem of [document.head, document.body]) {
+      elem.innerHTML = elem.innerHTML.replace('202X', new Date().getFullYear());
+    }        
+  </script>
+
+  <script src="./assets/js/bootstrap-jquery.min.js"></script>
+  <script src="./assets/js/bootstrap.js"></script>
+  <script src="./assets/js/escapes.js"></script>
+
+  <!-- ANSI -->
+  <script type="text/javascript">
+    // _386 = { onePass: true, fastLoad: true };
+    _386 = { onePass: true, speedFactor: 2.5 };
+
+    // ANSI
+    escapes('./assets/ansi/ERIC_FEIGNER_HEADER_2022.ANS', function () {document.querySelector('header #ansi').append(this) });
+    escapes('./assets/ansi/ERIC_FEIGNER_FOOTER_2022.ANS', function () {document.querySelector('footer').append(this); });
+
+    document.querySelector('#email').onclick = (evt) => {
+      var _0x1123 = [ '\x66\x65\x69\x67\x6E\x65\x72 \x40 \x67\x6D\x61\x69\x6C\x2E\x63\x6F\x6D', ];
+      const r = document.createElement('h4')
+      r.innerHTML = _0x1123[0] + '<br /><br />'
+      evt.target.parentNode.replaceChild(r, evt.target)
+    };
+  </script>
+
+  <!-- ASCII -->
+  <script src="./assets/js/perlin.js" type="text/javascript" charset="utf-8"></script>
+  <script>
+
+    const FPS = 60;
+    const start = Date.now();    
+
+    let charset =  " `.-\':_,^=;><+!*/?)(|{}[]#$0%&@";
+    const ascii = document.getElementById("ascii");
+    const originalFrameWidth = ascii.offsetWidth;
+
+    let width;
+    let height;
+
+    // listeners
+    const calculateDimensions = () => {
+      width = Math.floor((window.innerWidth - 20) / 9.9);
+      height = Math.floor(window.innerHeight / 20);
+    };
+    new ResizeObserver(() => { calculateDimensions() }).observe(document.body);
+    calculateDimensions();
+
+    let focused = true;
+    document.addEventListener("visibilitychange", () => {
+      focused = document.visibilityState != "hidden";
+    });
+    addEventListener('mouseup', (event) => { focused = true });
+    addEventListener('mousedown', (event) => { focused = false });
+
+    window.addEventListener('scroll', function () {
+      var element = document.querySelector('#ascii');
+      var position = element.getBoundingClientRect();
+
+      if (position.top < window.innerHeight && position.bottom >= 0) {
+        focused = true;
+      }
+      else {
+        focused = false;
+      }
+    });
+
+    let mousex = 0;
+      let mousey = 0;
+      function onMousemove(e) {
+        // Taken from https://stackoverflow.com/questions/16154857
+        let m_posx = 0,
+          m_posy = 0,
+          e_posx = 0,
+          e_posy = 0;
+        if (!e) e = window.event;
+        if (e.pageX || e.pageY) {
+          m_posx = e.pageX;
+          m_posy = e.pageY;
+        } else if (e.clientX || e.clientY) {
+          m_posx =
+            e.clientX +
+            document.body.scrollLeft +
+            document.documentElement.scrollLeft;
+          m_posy =
+            e.clientY +
+            document.body.scrollTop +
+            document.documentElement.scrollTop;
+        }
+        let curObj = ascii;
+        if (curObj.offsetParent) {
+          do {
+            e_posx += curObj.offsetLeft;
+            e_posy += curObj.offsetTop;
+          } while ((curObj = curObj.offsetParent));
+        }
+        mousex = (m_posx - e_posx) / ascii.offsetWidth;
+        mousey =
+          1 -
+          (m_posy - e_posy) /
+            (height * parseInt(window.getComputedStyle(ascii).lineHeight));
+      }
+      document.body.addEventListener("mousemove", onMousemove, false);    
+
+    // helpers
+    for (const v of Object.getOwnPropertyNames(Math)) { this[v] = Math[v]; } // Import all of Math's properties
+    const fastmap = (v, f) => { let ret = []; for (let i = 0; i < v.length; i++) { ret.push(f(v[i], i)); } return ret; };    
+    const lerp = (a, b, p) => { return a * (1 - p) + b * p; };    
+    const clamp = (x, low, hi) => { return min(max(x, low), hi); };
+    const mul = (v, x) => fastmap(v, (e) => e * x);
+    const step = (edge, value) => { return 1.0 - max(sign(edge-value),0.0) }; 
+    const easeInOut = (t) => {return t<.5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1};
+    const easeInOutQuint = (x) => x < 0.5 ? 16 * x * x * x * x * x : 1 - Math.pow(-2 * x + 2, 5) / 2;
+    const easeOutCubic = (x)  => x * x * x;
+    // beans
+    const shaders = {
+      ripple: {
+        charset:  ` .-\':_,^=;><+!*/?)(|{}[]#$0%&@`,
+        def: `
+        let LOW = width <= 100 ? 15 : width <= 180 ? 20 : width <= 300 ? 20 : 30;
+        function shader(x, y, t) {
+          const c_x = round(x * (width-1) - width/2);
+          const c_y = round(y * (height-1) - height/2);
+          const timescale = t/6;
+          if (y == 0 || y == 1) { return '#'; } else if (x == 0 || x == 1) { return '#'; }      
+          let p = (t) => (.5*sin(t)+.5)
+          const zoom = lerp(LOW, LOW+150, easeOutCubic(p((y)+timescale)))
+          const a = lerp(.1, .3, (p(timescale)))
+          const b = lerp(.6, .3, (p(timescale)))
+          return a*sin(40* (pow(c_x/zoom,2) + pow((c_y) / (zoom/2),2))) + b
+        }    
+        `
+      },
+      asymptote: {
+        charset: " `.-':_,^=;><+!rc*/z?sLTv)J7(|Fi{C}fI31tlu[neoZ5Yxjya]2ESwqkP6h9d4VpOGbUAKXHm8RD#$Bg0MNWQ%&@'",
+        def: `
+        let LOW = width <= 50 ? 8 : width <= 100 ? 15 : width <= 180 ? 24 : width <= 300 ? 28 : 32
+        function shader(x, y, t) {
+          const c_x = round(x * (width-1) - width/2)
+          const c_y = round(y * (height-1) - height/2)
+          const timescale = t/2.5
+          const p = (t) => (.5*sin((y+t))+.5)
+          if (y == 0 || y == 1) { return '#'; }
+          else if (x == 0 || x == 1) { return '#'; }
+          zoom = lerp(LOW, 105, easeOutCubic(p(timescale)))
+          yadd = lerp(-7.5, -7, p(timescale))
+          a = lerp(.25, 1, p(timescale))
+          b = lerp(.5, 0, p(timescale))
+          return a * sin(pow(c_x/zoom,2) * pow((c_y/(zoom/2))-yadd,2)) + b;
+        }
+        `
+      },
+      foam: {
+        charset:  " `.-\':_,^=;><+!*/?)(|{}[]#$0%&@",
+        def: `
+          const TIMESCALE = .65;
+          const OCTAVE = 1;
+          const MULSCALE = 5.0;
+          const HEIGHT = .1;
+          const TIDE = 0.3;
+          const FOAM_THICKNESS = 0.15;
+          const fbm = (x,y,t) => {
+              let value = 0;
+              let scale = 0.5;
+              for(let i = 0; i < OCTAVE; i++){
+                  value += noise.perlin2(x,y) * scale;
+                  [x,y] = mul([x,y], 2);
+                  scale *= 0.5;
+              }
+              return value
+          }
+          function shader(x, y, t) {
+              if (y == 0 || y == 1) { return '#'; } else if (x == 0 || x == 1) { return '#'; }     
+              let ret = ' '
+              const newtime = t * TIMESCALE;
+              const fbmval = fbm(
+                  x*MULSCALE+0.2*sin(0.3*newtime)+0.15*newtime,
+                  -1.05 * newtime + y * MULSCALE + 0.1 * cos(0.68*newtime),
+                  t
+              )
+            const fbmvalshadow = fbm(
+                  x*MULSCALE+0.2*sin(-0.6*newtime + 25.0 * y)+0.15*newtime+3.0,
+                  -1.05*newtime+y*MULSCALE+0.13*cos(-0.68*newtime),
+                t) +0.1*sin(0.43*newtime);
+              const myheight = HEIGHT+TIDE*sin(newtime+5.0*x-8.0*y);
+            const shadowheight = HEIGHT+TIDE*1.3*cos(newtime+2.0*x-2.0*y);
+            const withinFoam = step(myheight, fbmval)*step(fbmval, myheight + FOAM_THICKNESS);
+            const shadow = (1.0-withinFoam)*step(shadowheight, fbmvalshadow)*step(fbmvalshadow, shadowheight + FOAM_THICKNESS * 0.7);
+            ret = withinFoam * .0 + shadow * .19 + ((1-withinFoam) * (1-shadow)) * .07
+              return ret;
+          }    
+        `
+      }
+    }
+
+    // rand + unpack
+    const unpack = (key) => {
+      let shader = shaders[key]
+      charset = shader.charset ? shader.charset : charset;
+      eval?.(shader.def)
+    }
+
+    // theme menu
+    const shader_keys = Object.keys(shaders);
+    for (const key of shader_keys) {
+      const menu = document.querySelector('#theme .dropdown-menu')    ;
+      let menuItem = document.createElement('a');
+      menuItem.className="dropdown-item";
+      menuItem.href='#';
+      menuItem.innerText = key;
+      menuItem.onclick = () => unpack(key); 
+      menu.appendChild(menuItem);
+      menu.appendChild(document.createElement('br'));
+    }
+
+    // rando
+    unpack(shader_keys[Math.floor(Math.random() * shader_keys.length)]);
+
+    function draw() {
+      if (!focused) { return; }
+
+      const t = (Date.now() - start) / 1000;
+      let buffer = "";
+
+      for (let i = 0; i < height; i++) {
+        for (let j = 0; j < width; j++) {
+          let index = 0;
+
+          // flip y such such that (0,0) is the top left corner
+          // so we can easily dump our returned buffer to screen without any drama
+          const val = shader(j / (width - 1), (height - 1 - i) / (height - 1), t);
+
+          // if shader returns a char / string, use it directly
+          // otherwise, clamp + map to our charset
+          if(typeof val === 'string' || val instanceof String){ buffer += val; } 
+          else {          
+            index = floor(
+              clamp(val * (charset.length - 1), 0, charset.length - 1)
+            );
+            if (!Number.isFinite(index)) { index = 0; }
+            buffer += charset[index];
+          }
+        }
+        buffer += "\n";
+      }
+      if (ascii.innerText != buffer) { ascii.innerText = buffer; }
+    }
+
+    raf = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) { return window.setInterval(callback, 1000 / FPS); };
+    tic = () => {
+      draw();
+      raf(tic);
+    };
+    raf(tic);    
+
+  </script>
+</body>
+
 </html>
