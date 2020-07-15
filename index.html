@@ -27,11 +27,17 @@
 
     <link rel="shortcut icon" href="/assets/images/favicon.png" />
 
-    <link href="/assets/css/bootstrap.css" rel="stylesheet">
-    <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <!--<link href="/assets/css/bootstrap.css" rel="stylesheet">-->
+    <!--<link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">-->
+
+    <link href="/assets/css2/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css2/bootstrap-theme.css" rel="stylesheet">
+
+    <!--<link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">-->
 
     <style type="text/css">
-      /* ANSI (normal / bright)
+      /*
+         ANSI (normal / bright)
          black: #000000 / #555555
          red: #aa0000 / #ff5555
          green: #00aa00 / #55ff55
@@ -39,31 +45,39 @@
          blue:	#0000aa / #5555ff
          magenta: #aa00aa / # ff55ff
          cyan: #00aaaa / #55ffff
-         white: #aaaaaa / #ffffff */
+         white: #aaaaaa / #ffffff
+      */
       body { visibility: hidden }
+
       canvas { width: 100%; }
+
+      /*
       footer { background-color: #000 }
       .tldr { color: #ffffff; border: 1px solid;}
+      */
 
+      /*
       #work .table tr>td:first-child { color: #55ff55; }
       @media (min-width: 767px) { #work .table tr>td:first-child { padding-right: 64px; }}
+      */
     </style>
   </head>
 
   <body>
-    <div class="navbar navbar-inverse navbar-static-top hidden-phone">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="brand" href="./">ERIC_FEIGNER_2018.NFO</a>
-            <ul class="nav navbar-nav nav-collapse">
-              <li><a href="./#nfo">NFO</a></li>
-              <li><a href="./#personal">PERSONAL</a></li>
-              <li><a href="./#work">WORK</a></li>
-              <li><a href="./#faq">FAQ</a></li>
-            </ul>
+
+    <nav class="navbar navbar-inverse navbar-static-top hidden-xs">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="brand" href="./">ERIC_FEIGNER_2020.NFO</a>
         </div>
+          <ul class="nav navbar-nav">
+            <li><a href="./#nfo">NFO</a></li>
+            <li><a href="./#personal">PERSONAL</a></li>
+            <li><a href="./#work">WORK</a></li>
+            <li><a href="./#faq">FAQ</a></li>
+          </ul>
       </div>
-    </div>
+    </nav>
 
     <header></header>
 
@@ -75,7 +89,7 @@
             <h1>1. NFO</h1>
           </div>
 
-          <div class="hero-unit span7">
+          <div class="jumbotron span7">
             <h1>Salutations!</h1>
             <table class="table">
               <tbody>
@@ -110,13 +124,13 @@
           </div>
 
           <div class="span4 offset1-2">
-            <div class="hero-unit" style="text-align: center;">
+            <div class="jumbotron" style="text-align: center;">
               <h1>Get at me:</h1>
               <a id="email" class="btn btn-large">Email</a>
             </div>
             <div class="hidden-phone">
               <br/><br />
-              <div class="hero-unit" style="text-align: center;">
+              <div class="jumbotron" style="text-align: center;">
                 <p>&#10084;&#10084;&#10084;</p>
                 <p>BEST VIEWED AT 80 COLUMNS WIDE<br/>
                 <p>&#10084;&#10084;&#10084;</p>
@@ -142,6 +156,13 @@
           <div class="page-header">
             <h1>3. WORK</h1>
           </div>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-4">foo</div>
+    <div class="col-xs-12 col-sm-8">
+      Some quick example text to build on the card title and make up the bulk of the card's content.
+  </div>
+</div>
 
           <table class="table">
             <tbody>
@@ -394,9 +415,11 @@
     <script src="/assets/js/escapes.js"></script>
 
     <script type="text/javascript">
-      _386 = { onePass: true, speedFactor: 2.2 };
+      _386 = { onePass: true, fastLoad: true };
+      //_386 = { onePass: true, speedFactor: 2.2 };
 
       escapes('/assets/ansi/ERIC_FEIGNER_HEADER_2018.ANS', function () { $('header').html(this); });
+      //escapes('/assets/ansi/grid.ans', function () { $('header').html(this); });
       escapes('/assets/ansi/ERIC_FEIGNER_FOOTER_2018.ANS', function () { $('footer').html(this); });
 
       $('#email').mousedown(function(){
