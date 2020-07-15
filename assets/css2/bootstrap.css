@@ -1070,7 +1070,8 @@ body {
   font-size: 18px;
   line-height: 20px;
   color: #bbbbbb;
-  background-color: #000084;
+  /*background-color: #000084;*/
+  background-color: #0000aa;
 }
 input,
 button,
@@ -1158,7 +1159,8 @@ h6,
   font-family: inherit;
   font-weight: normal;
   line-height: 20px;
-  margin: 0 0 20px 0;
+  /*margin: 0 0 20px 0;*/
+  margin: 0;
   color: inherit;
 }
 h1 small,
@@ -1345,9 +1347,13 @@ a.bg-danger:hover {
   background-color: #000000;
 }
 .page-header {
-  padding-bottom: 9px;
-  margin: 40px 0 20px;
+  padding: 20px 20px;
+  margin: 20px 0 20px;
   border-bottom: 2px solid #bbbbbb;
+  background: #00aaaa;
+}
+.page-header h1 {
+  color: #000000;
 }
 ul,
 ol {
@@ -3866,6 +3872,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-static-top {
   z-index: 1000;
+  margin: 0;
 }
 .navbar-fixed-top,
 .navbar-fixed-bottom {
@@ -4516,13 +4523,18 @@ a.badge:focus {
   float: right;
 }
 .jumbotron {
-  padding: 18px 6px 18px 8px 18px 6px 18px 8px;
-  margin-bottom: 18px 6px 18px 8px;
-  color: #bbbbbb;
-  padding: 9px 3px 9px 4px;
-  margin: 9px 4px 9px 3px;
-  background-color: transparent;
-  border: 2px solid #fefe54;
+  padding: 16px 20.8px;
+  margin-bottom: 20px;*
+  line-height: 20px;
+  color: #ffffff;
+  background-color: #aa00aa;
+  border: 4px double #ffffff;
+
+  /* HACK: steal dropshadow from menu-item */
+  /*box-shadow: 0 0 0 4px #00aaaa;*/
+  -webkit-box-shadow: 11px 13px 0 4px black;
+     -moz-box-shadow: 11px 13px 0 4px black;
+          box-shadow: 11px 13px 0 4px black;
 }
 .jumbotron h1,
 .jumbotron .h1 {
