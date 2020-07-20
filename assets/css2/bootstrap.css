@@ -2919,6 +2919,8 @@ select[multiple].form-group-lg .form-control {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
+  margin-bottom: 20px;
 }
 .btn:focus,
 .btn:active:focus,
@@ -3000,7 +3002,9 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
   color: #000000;
-  background-color: #00aaaa;
+  background-color: #bbbbbb;
+  padding: 10px 10px;
+  font-size: 18px;
   /*
   &:hover,
   &:focus,
@@ -4539,6 +4543,12 @@ a.badge:focus {
 .jumbotron h1,
 .jumbotron .h1 {
   color: inherit;
+
+  margin-bottom: 20px;
+  line-height: 1;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: blink;
 }
 .jumbotron p {
   margin-bottom: 18px 6px 18px 8px;
@@ -4562,6 +4572,13 @@ a.badge:focus {
   .jumbotron h1,
   .jumbotron .h1 {
     font-size: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .jumbotron {
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
   }
 }
 .thumbnail {
