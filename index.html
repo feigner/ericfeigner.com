@@ -16,7 +16,7 @@
   <meta name="title" content="ERIC_FEIGNER_202X.NFO" />
   <meta name="description" content="My name is Eric Feigner and this is my internet website." />
   <meta name="keywords" content="eric, feigner, eff, ericfeigner" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="language" content="en" />
   <meta name="robots" content="index, follow" />
 
@@ -657,11 +657,11 @@ ___( o)>
     _386 = { onePass: true, speedFactor: 2.5 };
 
     // ANSI
-    escapes('./assets/ansi/ERIC_FEIGNER_HEADER_2022.ANS', function () {document.querySelector('header #ansi').append(this) });
-    escapes('./assets/ansi/ERIC_FEIGNER_FOOTER_2022.ANS', function () {document.querySelector('footer').append(this); });
+    escapes('./assets/ansi/ERIC_FEIGNER_HEADER_2022.ANS', function () { document.querySelector('header #ansi').append(this) });
+    escapes('./assets/ansi/ERIC_FEIGNER_FOOTER_2022.ANS', function () { document.querySelector('footer').append(this); });
 
     document.querySelector('#email').onclick = (evt) => {
-      var _0x1123 = [ '\x66\x65\x69\x67\x6E\x65\x72 \x40 \x67\x6D\x61\x69\x6C\x2E\x63\x6F\x6D', ];
+      var _0x1123 = ['\x66\x65\x69\x67\x6E\x65\x72 \x40 \x67\x6D\x61\x69\x6C\x2E\x63\x6F\x6D',];
       const r = document.createElement('h4')
       r.innerHTML = _0x1123[0] + '<br /><br />'
       evt.target.parentNode.replaceChild(r, evt.target)
@@ -673,9 +673,9 @@ ___( o)>
   <script>
 
     const FPS = 60;
-    const start = Date.now();    
+    const start = Date.now();
 
-    let charset =  " `.-\':_,^=;><+!*/?)(|{}[]#$0%&@";
+    let charset = " `.-\':_,^=;><+!*/?)(|{}[]#$0%&@";
     const ascii = document.getElementById("ascii");
     const originalFrameWidth = ascii.offsetWidth;
 
@@ -684,8 +684,10 @@ ___( o)>
 
     // listeners
     const calculateDimensions = () => {
-      width = Math.floor((window.innerWidth - 20) / 9.9);
-      height = Math.floor(window.innerHeight / 20);
+      // HACK: for some reason, window.innerWidth / window.innerHeight do *NOT* behave
+      // like I would expect on mobile safari...
+      width = Math.floor((document.documentElement.clientWidth - 20) / 9.9);
+      height = Math.floor(document.documentElement.clientHeight / 17);
     };
     new ResizeObserver(() => { calculateDimensions() }).observe(document.body);
     calculateDimensions();
@@ -710,56 +712,56 @@ ___( o)>
     });
 
     let mousex = 0;
-      let mousey = 0;
-      function onMousemove(e) {
-        // Taken from https://stackoverflow.com/questions/16154857
-        let m_posx = 0,
-          m_posy = 0,
-          e_posx = 0,
-          e_posy = 0;
-        if (!e) e = window.event;
-        if (e.pageX || e.pageY) {
-          m_posx = e.pageX;
-          m_posy = e.pageY;
-        } else if (e.clientX || e.clientY) {
-          m_posx =
-            e.clientX +
-            document.body.scrollLeft +
-            document.documentElement.scrollLeft;
-          m_posy =
-            e.clientY +
-            document.body.scrollTop +
-            document.documentElement.scrollTop;
-        }
-        let curObj = ascii;
-        if (curObj.offsetParent) {
-          do {
-            e_posx += curObj.offsetLeft;
-            e_posy += curObj.offsetTop;
-          } while ((curObj = curObj.offsetParent));
-        }
-        mousex = (m_posx - e_posx) / ascii.offsetWidth;
-        mousey =
-          1 -
-          (m_posy - e_posy) /
-            (height * parseInt(window.getComputedStyle(ascii).lineHeight));
+    let mousey = 0;
+    function onMousemove(e) {
+      // Taken from https://stackoverflow.com/questions/16154857
+      let m_posx = 0,
+        m_posy = 0,
+        e_posx = 0,
+        e_posy = 0;
+      if (!e) e = window.event;
+      if (e.pageX || e.pageY) {
+        m_posx = e.pageX;
+        m_posy = e.pageY;
+      } else if (e.clientX || e.clientY) {
+        m_posx =
+          e.clientX +
+          document.body.scrollLeft +
+          document.documentElement.scrollLeft;
+        m_posy =
+          e.clientY +
+          document.body.scrollTop +
+          document.documentElement.scrollTop;
       }
-      document.body.addEventListener("mousemove", onMousemove, false);    
+      let curObj = ascii;
+      if (curObj.offsetParent) {
+        do {
+          e_posx += curObj.offsetLeft;
+          e_posy += curObj.offsetTop;
+        } while ((curObj = curObj.offsetParent));
+      }
+      mousex = (m_posx - e_posx) / ascii.offsetWidth;
+      mousey =
+        1 -
+        (m_posy - e_posy) /
+        (height * parseInt(window.getComputedStyle(ascii).lineHeight));
+    }
+    document.body.addEventListener("mousemove", onMousemove, false);
 
     // helpers
     for (const v of Object.getOwnPropertyNames(Math)) { this[v] = Math[v]; } // Import all of Math's properties
-    const fastmap = (v, f) => { let ret = []; for (let i = 0; i < v.length; i++) { ret.push(f(v[i], i)); } return ret; };    
-    const lerp = (a, b, p) => { return a * (1 - p) + b * p; };    
+    const fastmap = (v, f) => { let ret = []; for (let i = 0; i < v.length; i++) { ret.push(f(v[i], i)); } return ret; };
+    const lerp = (a, b, p) => { return a * (1 - p) + b * p; };
     const clamp = (x, low, hi) => { return min(max(x, low), hi); };
     const mul = (v, x) => fastmap(v, (e) => e * x);
-    const step = (edge, value) => { return 1.0 - max(sign(edge-value),0.0) }; 
-    const easeInOut = (t) => {return t<.5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1};
+    const step = (edge, value) => { return 1.0 - max(sign(edge - value), 0.0) };
+    const easeInOut = (t) => { return t < .5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1 };
     const easeInOutQuint = (x) => x < 0.5 ? 16 * x * x * x * x * x : 1 - Math.pow(-2 * x + 2, 5) / 2;
-    const easeOutCubic = (x)  => x * x * x;
+    const easeOutCubic = (x) => x * x * x;
     // beans
     const shaders = {
       ripple: {
-        charset:  ` .-\':_,^=;><+!*/?)(|{}[]#$0%&@`,
+        charset: ` .-\':_,^=;><+!*/?)(|{}[]#$0%&@`,
         def: `
         let LOW = width <= 100 ? 15 : width <= 180 ? 20 : width <= 300 ? 20 : 30;
         function shader(x, y, t) {
@@ -795,7 +797,7 @@ ___( o)>
         `
       },
       foam: {
-        charset:  " `.-\':_,^=;><+!*/?)(|{}[]#$0%&@",
+        charset: " `.-\':_,^=;><+!*/?)(|{}[]#$0%&@",
         def: `
           const TIMESCALE = .65;
           const OCTAVE = 1;
@@ -834,7 +836,52 @@ ___( o)>
               return ret;
           }    
         `
-      }
+      },
+      spiral: {
+        charset: " `.-\':_,^=;><+!*/?)(|{}[]#$0%&@",
+        def: `
+          const shaderParams = {
+            // x jitterin'
+            x_wave_amplitude: .45, // Max distance center_x can move from its original position
+            x_wave_frequency: 0.0, // How fast center_x moves back and forth
+            x_wave_speed: .15, // Speed of the x-axis wave's animation
+            
+            // y-wavin'
+            y_wave_amplitude: 0.35, // Amplitude of the y-axis wave
+            y_wave_frequency: 10.0, // Frequency of the y-axis wave
+            y_wave_speed: .25, // Speed of the y-axis wave's animation
+
+            // spiralin'
+            spiral_frequency: 12.0, // Controls the density of the spirals
+            angular_frequency: 2.0, // Controls the twists in the spirals
+            spiral_speed: 0.15,  // Speed of the spiral rotation
+          };
+
+
+          function shader(x, y, t) {
+            if (y == 0 || y == 1) { return '#'; } else if (x == 0 || x == 1) { return '#'; }     
+            const center_x = 0.5;
+            const center_y = 0.5;
+            
+            // Determine the shifted X and dynamically waved Y positions
+            const waved_x = x + shaderParams.x_wave_amplitude * Math.sin((y * shaderParams.x_wave_frequency) + (t * shaderParams.x_wave_speed));  
+            const waved_y = y + shaderParams.y_wave_amplitude * Math.sin((x * shaderParams.y_wave_frequency) + (t * shaderParams.y_wave_speed));
+            
+            const dx = waved_x - center_x;
+            const dy = waved_y - center_y;
+
+            // Calculate radius and angle for the spiral based on the adjusted coordinates
+            const radius = Math.sqrt(dx * dx + dy * dy);
+            const angle = Math.atan2(dy, dx);
+          
+            // Generate the spiral pattern, applying the frequency, speed, and angular adjustments
+            const spiral = Math.sin(shaderParams.spiral_frequency * (radius - t * shaderParams.spiral_speed) + shaderParams.angular_frequency * angle);
+            
+            // Normalize the spiral value to be between 0 and 1
+            return (spiral * 0.5 + 0.5);
+          }
+        `
+      },
     }
 
     // rand + unpack
@@ -847,12 +894,12 @@ ___( o)>
     // theme menu
     const shader_keys = Object.keys(shaders);
     for (const key of shader_keys) {
-      const menu = document.querySelector('#theme .dropdown-menu')    ;
+      const menu = document.querySelector('#theme .dropdown-menu');
       let menuItem = document.createElement('a');
-      menuItem.className="dropdown-item";
-      menuItem.href='#';
+      menuItem.className = "dropdown-item";
+      menuItem.href = '#';
       menuItem.innerText = key;
-      menuItem.onclick = () => unpack(key); 
+      menuItem.onclick = () => unpack(key);
       menu.appendChild(menuItem);
       menu.appendChild(document.createElement('br'));
     }
@@ -876,8 +923,8 @@ ___( o)>
 
           // if shader returns a char / string, use it directly
           // otherwise, clamp + map to our charset
-          if(typeof val === 'string' || val instanceof String){ buffer += val; } 
-          else {          
+          if (typeof val === 'string' || val instanceof String) { buffer += val; }
+          else {
             index = floor(
               clamp(val * (charset.length - 1), 0, charset.length - 1)
             );
@@ -890,12 +937,12 @@ ___( o)>
       if (ascii.innerText != buffer) { ascii.innerText = buffer; }
     }
 
-    raf = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) { return window.setInterval(callback, 1000 / FPS); };
+    raf = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (callback) { return window.setInterval(callback,  1000 / FPS); };
     tic = () => {
       draw();
       raf(tic);
     };
-    raf(tic);    
+    raf(tic);
 
   </script>
 </body>
